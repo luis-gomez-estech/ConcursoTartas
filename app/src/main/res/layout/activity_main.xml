@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/fondo4"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="#61FFFFFF">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="World Cake !!"
+            android:textColor="#000"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/image_tarta"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/titulo"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/cake"
+            android:layout_gravity="center"/>
+
+
+
+        <!-- Creo un TextInputLayout  para el nombre -->
+
+
+        <android.support.design.widget.TextInputLayout
+
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bordes_casillas_formulario"
+            android:hint="Tu nombre"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="#000" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/nombre_toast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="#c717e7"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Apellido -->
+
+        <android.support.design.widget.TextInputLayout
+
+            android:id="@+id/apellido_"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bordes_casillas_formulario"
+            android:hint="Tu apellido"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="#000" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/apellido_toast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="#c717e7"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- edad -->
+
+        <android.support.design.widget.TextInputLayout
+
+            android:id="@+id/edad"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bordes_casillas_formulario"
+            android:hint="Tu edad"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="#000"
+            android:inputType="number"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edad_toast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                        />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- SEXO Y PREGUNTA SI HA PARTICIPADO-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <TextView
+                android:id="@+id/texto_sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccione_el_sexo"
+                android:textSize="16sp"
+                />
+
+            <RadioGroup
+                android:id="@+id/eleccion_sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+               >
+
+                <RadioButton
+                    android:id="@+id/hombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/h" />
+
+                <RadioButton
+                    android:id="@+id/mujer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/m" />
+
+            </RadioGroup>
+
+
+            <!-- Pregunta si ha participado -->
+
+            <TextView
+                android:id="@+id/pregunta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/has_participado_en_otro_concurso"
+                android:layout_below="@id/eleccion_sexo"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                />
+
+            <CheckBox
+                android:id="@+id/primer_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/eleccion_sexo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="" />
+
+
+        </RelativeLayout>
+
+        <!-- Casilla oculta-->
+
+        <EditText
+            android:id="@+id/campo_oculto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:ems="10"
+            android:background="@drawable/bordes_casillas_formulario"
+            android:inputType="textPersonName"
+
+            />
+
+
+        <Button
+            android:id="@+id/inscribete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/boton_inscripcion"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="@string/inscribete"
+            android:layout_marginTop="16dp"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

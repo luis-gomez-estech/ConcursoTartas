@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TextInputLayout</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad">Edad</string>
+    <string name="seleccione_el_sexo">Seleccione el sexo</string>
+
+    <string name="has_participado_en_otro_concurso">¿Has participado en otro concurso?</string>
+    <string name="m">M</string>
+    <string name="h">H</string>
+    <string name="inscribete">Inscribete</string>
+</resources>
